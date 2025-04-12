@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🎉 Selamat Ulang Tahun! 🎉</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Fredoka One", cursive;
+        background: linear-gradient(to bottom right, #ffd1dc, #ffe6f0);
+        overflow-x: hidden;
+      }
+      header {
+        background-color: #ff99cc;
+        padding: 20px;
+        color: white;
+        text-align: center;
+        font-size: 2.5em;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+      .container {
+        text-align: center;
+        padding: 30px;
+        color: #d63384;
+      }
+      .cake,
+      .balloons {
+        font-size: 4em;
+        margin: 20px 0;
+      }
+      .balloons {
+        animation: float 2s infinite alternate ease-in-out;
+      }
+      .cake {
+        animation: rotateCake 4s linear infinite;
+      }
+      .card {
+        margin: 20px auto;
+        padding: 20px;
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 0 20px rgba(255, 182, 193, 0.5);
+        width: 80%;
+        max-width: 600px;
+      }
+      button {
+        background: #ff66b2;
+        color: white;
+        border: none;
+        padding: 15px 25px;
+        border-radius: 10px;
+        font-size: 1.2em;
+        cursor: pointer;
+        margin-top: 20px;
+        transition: 0.3s ease-in-out;
+      }
+      button:hover {
+        background: #ff80bf;
+        transform: scale(1.05);
+      }
+      .message-box {
+        display: none;
+        font-size: 1.2em;
+        margin-top: 20px;
+        background: #fff0f5;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 0 15px pink;
+        animation: fadeIn 1s ease forwards;
+      }
+      .confetti {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 999;
+      }
+      .confetti-piece {
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        animation: confetti 5s linear infinite;
+      }
+      #music-player {
+        margin-top: 30px;
+      }
+      @keyframes float {
+        from {
+          transform: translateY(0);
+        }
+        to {
+          transform: translateY(-20px);
+        }
+      }
+      @keyframes rotateCake {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      @keyframes confetti {
+        0% {
+          transform: translateY(-100%) rotate(0deg);
+        }
+        100% {
+          transform: translateY(100vh) rotate(360deg);
+        }
+      }
+      footer {
+        background-color: #ff99cc;
+        text-align: center;
+        color: white;
+        padding: 15px;
+        margin-top: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="confetti" id="confetti"></div>
+    <header>🎈 Happy Birthday, Rismaul Vinnesa 🎈</header>
+    <div class="container">
+      <div class="balloons">🎈🎈🎈🎈🎈</div>
+      <div class="cake">🎂</div>
+      <div class="card">
+        <h1>Selamat Bertambah Usia (-1) 🥳</h1>
+
+        <p>Walaupun ini udah telat banget, tpi selamat ulang tahun yaaa</p>
+        <p>Hope you like it</p>
+        <button onclick="tampilkanUcapan()">Klik aku, ada hadiah 🎁</button>
+        <div class="message-box" id="pesan"></div>
+        <div id="music-player">
+          <p>🎵 Putar musiknya ya!</p>
+          <audio controls autoplay loop>
+            <source
+              src="https://raw.githubusercontent.com/azharm2412/amilliondreams/main/A%20Million%20Dreams%20-%20The%20Greatest%20Showman%20Cover%20by%20Alexandra%20Porat.mp3"
+              type="audio/mpeg"
+            />
+            Browser kamu tidak mendukung pemutar audio.
+          </audio>
+        </div>
+      </div>
+    </div>
+    <footer>Made by Azhar Maulana</footer>
+    <script>
+      const ucapan = [
+        "Mungkin ulang tahunmu kali ini terasa berbeda dibanding tahun tahun sebelumnya, tapi aku percaya bahwa setiap kegagalan pasti ada hikmahnya ",
+        "Di usia yang baru ini, aku harap kamu lebih percaya diri lagi sama kemampuanmu dan apa yang kamu miliki",
+        "Kamu adalah orang yang hebat dan kuat",
+        "Tahun ini jadi tahun kamu berjuang masuk PTN dan aku tahu itu tidaklah mudah",
+        "PK, PM, dan 5 subtes lainnnya seringkali membuat kamu mengeluh",
+        "Kamu boleh mengeluh tapi ingat untuk kembali lagi ke jalan yang udah kamu mulai",
+        "Ditambah sekarang waktunya udah ga lama lagi buat kamu berjuang, kamu harus bangkit dan mengejar ketertinggalan",
+        "Banyak orang keren yang nilai TO nya udah tinggi-tinggi, tapi percayalah kamu ga kalah kerennya. Dan sekali lagi aku tekankan, kalau setiap orang punya pace nya masing-masing",
+        "Terkadang kamu merasa dunia nggak adil, merasa kenapa usaha kerasmu belum kelihatan hasilnya. Tapi tahu nggak? Justru dari situ kamu sedang ditempa jadi seseorang yang luar biasa. Prosesmu memang nggak selalu mulus, tapi bukan berarti kamu nggak bergerak maju",
+        "Aku tahu kamu sering begadang, ngulang materi yang sama berkali-kali, bahkan kadang ngerasa “kayaknya aku nggak cocok di sini deh.” Tapi di balik semua itu, aku lihat kamu terus coba. Terus bertahan. Dan itu luar biasa",
+        "Nggak semua orang punya keteguhan kayak kamu. Nggak semua orang berani pasang target setinggi kamu dan tetap berdiri walaupun jatuh berkali-kali. Kamu harus bangga sama dirimu sendiri, sekecil apapun progres yang kamu buat",
+        "Kalau kamu capek, nggak apa-apa istirahat. Nggak usah maksa harus kelihatan kuat terus. Tapi jangan lama-lama diemnya, karena mimpimu terlalu besar buat ditinggal begitu aja. Kamu udah sejauh ini, masa iya berhenti sekarang?",
+        "Ingat, semua hal besar butuh waktu. Kayak pohon besar yang kuat, dia juga awalnya cuma benih kecil yang sabar nunggu waktu buat tumbuh. Kamu juga gitu. Apa yang kamu tanam sekarang, suatu hari bakal jadi hasil yang kamu syukuri banget",
+        "Mungkin kamu belum dapet hasilnya sekarang. Tapi mungkin, semesta sedang siapin waktu yang tepat. Dan tugasmu sekarang cuma satu: terus jalan, terus usaha, terus yakin",
+        "Aku percaya kamu bisa. Serius. Kamu bukan cuma pintar, tapi kamu punya tekad yang nggak semua orang punya",
+        "Di usia yang baru ini, ayo tumbuh lebih kuat lagi!",
+        "Kalau suatu hari nanti kamu lagi ngerasa jatuh, baca lagi kata-kata ini. Ingat betapa berharganya kamu. Ingat seberapa jauh kamu udah melangkah. Dan ingat, kamu nggak kalah dari siapa pun. Kamu cuma sedang ada di perjalananmu sendiri",
+        "Last but not least. Selamat ulang ya! Mari jadi versi terbaik dari diri kita sendiri. Good luck buat UTBK! Ditunggu kabar baiknya yaaaaa",
+      ];
+
+      let currentIndex = 0;
+      let confettiSudahMuncul = false;
+
+      function tampilkanUcapan() {
+        const box = document.getElementById("pesan");
+        box.innerHTML = ucapan[currentIndex];
+        box.style.display = "block";
+
+        if (!confettiSudahMuncul) {
+          buatConfetti();
+          confettiSudahMuncul = true;
+        }
+
+        currentIndex = (currentIndex + 1) % ucapan.length; // reset ke 0 setelah habis
+      }
+
+      function buatConfetti() {
+        const colors = ["#ff69b4", "#ff1493", "#ffc0cb", "#ffb6c1", "#db7093"];
+        const confettiArea = document.getElementById("confetti");
+        for (let i = 0; i < 150; i++) {
+          const confetti = document.createElement("div");
+          confetti.classList.add("confetti-piece");
+          confetti.style.backgroundColor =
+            colors[Math.floor(Math.random() * colors.length)];
+          confetti.style.left = Math.random() * 100 + "vw";
+          confetti.style.animationDelay = Math.random() * 5 + "s";
+          confettiArea.appendChild(confetti);
+        }
+      }
+    </script>
+  </body>
+</html>
